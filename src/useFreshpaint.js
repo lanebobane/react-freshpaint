@@ -68,7 +68,6 @@ function freshpaintInit() {
 }
 
 function useFreshpaint() {
-  // freshpaintInit();
   useEffect(() => {
     const script = document.createElement('script');
     script.src = `https://freshpaint-cdn.com/js/95629632-e650-498b-b78d-98afb6fb7d90/freshpaint.js`;
