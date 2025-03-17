@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import useFreshpaintCDN from './useFreshpaintCDN';
+import useFreshpaint from './useFreshpaint';
 
 function App() {
-  const freshpaint = useFreshpaintCDN()
+  useFreshpaint()
   return (
 
     <div className="App">
