@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import freshpaintInit from "./freshpaint-script"
 
-function useFreshpaintCDN(envId) {
+function useFreshpaintCDN() {
   const freshpaint = freshpaintInit();
   useEffect(() => {
     const script = document.createElement('script');

@@ -1,4 +1,4 @@
-function freshpaintInit(envId) {
+function freshpaintInit() {
     function p(r, e) {
         (e == null || e > r.length) && (e = r.length);
         for (var t = 0, a = new Array(e); t < e; t++) a[t] = r[t];
@@ -61,7 +61,7 @@ function freshpaintInit(envId) {
         }
     };
     E(document, window.freshpaint || []);
-    freshpaint.init(envId, {"api_host": "https://mc4by4yv08.execute-api.us-west-2.amazonaws.com/prod", "app_host": "https://dw8zt32li9okr.cloudfront.net"});
+    freshpaint.init("95629632-e650-498b-b78d-98afb6fb7d90", {"api_host": "https://mc4by4yv08.execute-api.us-west-2.amazonaws.com/prod", "app_host": "https://dw8zt32li9okr.cloudfront.net"});
     freshpaint.page();
 }
 
