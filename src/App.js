@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import useFreshpaintCDN from './useFreshpaintCDN';
 
 function App() {
+  const freshpaint = useFreshpaintCDN()
   return (
+
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -23,3 +27,4 @@ function App() {
 }
 
 export default App;
+
