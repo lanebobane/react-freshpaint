@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 
 // A custom hook to install Freshpaint in a React app. 
 // TODO: make it accept an envId parameter to make it easier for this hook to be shared. 
-function useFreshpaint() {
-freshpaintInit();
+function useFreshpaint(envId) {
+freshpaintInit(envId);
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = `https://freshpaint-cdn.com/js/95629632-e650-498b-b78d-98afb6fb7d90/freshpaint.js`;
+    script.src = `https://freshpaint-cdn.com/js/${envId}/freshpaint.js`;
     script.async = true;
     script.onload = () => {
       // Callback function after the script is loaded
@@ -33,7 +33,7 @@ freshpaintInit();
 
 // Initializes window.freshpaint and prepares it for hydration with content from the 
 // freshpaint-cdn.com resource fetched in the useEffect hook. 
-function freshpaintInit() {
+function freshpaintInit(_envId) {
     function p(r, e) {
         (e == null || e > r.length) && (e = r.length);
         for (var t = 0, a = new Array(e); t < e; t++) a[t] = r[t];
@@ -96,7 +96,7 @@ function freshpaintInit() {
         }
     };
     E(document, window.freshpaint || []);
-    freshpaint.init("95629632-e650-498b-b78d-98afb6fb7d90", {"api_host": "https://mc4by4yv08.execute-api.us-west-2.amazonaws.com/prod", "app_host": "https://dw8zt32li9okr.cloudfront.net"});
+    freshpaint.init(_envId, {"api_host": "https://mc4by4yv08.execute-api.us-west-2.amazonaws.com/prod", "app_host": "https://dw8zt32li9okr.cloudfront.net"});
     freshpaint.page();
   }
 

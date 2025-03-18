@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import React from "react";
 import useFreshpaint from './useFreshpaint';
 import FreshpaintForm from './FreshpaintForm';
 
+const FRESHPAINT_ENV_ID = '95629632-e650-498b-b78d-98afb6fb7d90'
+
 function App() {
-  useFreshpaint()
+  useFreshpaint(FRESHPAINT_ENV_ID)
   return (
 
     <div className="App">
