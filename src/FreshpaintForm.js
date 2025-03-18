@@ -1,15 +1,9 @@
 import React from 'react';
 
-function clicky(){
-    window.freshpaint?.track('clicky clicky')
-}
-
 const FreshpaintForm = (props) => {
 
     function formOnSubmit(event){
-        
-
-        event.preventDefault(); // Prevents page reload
+        event.preventDefault();
         const name = document.getElementById("form-name").value;
         const email = document.getElementById("form-email").value;
         const address = document.getElementById("form-address").value;
@@ -37,9 +31,6 @@ const FreshpaintForm = (props) => {
         <button type="submit">Submit</button>
         </form>
     )
-
-    
-    
 };
 
 export default FreshpaintForm;

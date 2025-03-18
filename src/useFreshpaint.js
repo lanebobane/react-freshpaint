@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 
 // A custom hook to install Freshpaint in a React app. 
-// TODO: make it accept an envId parameter to make it easier for this hook to be shared. 
 function useFreshpaint(envId) {
 freshpaintInit(envId);
 
@@ -10,29 +9,21 @@ freshpaintInit(envId);
     script.src = `https://freshpaint-cdn.com/js/${envId}/freshpaint.js`;
     script.async = true;
     script.onload = () => {
-      // Callback function after the script is loaded
-      console.log('Freshpaint CDN script loaded successfully');
-      // Any function that relies on the script should be called here
-    //   freshpaint.track('loaded')
+      console.log('Freshpaint CDN script loaded successfully.');
       
     };
 
     script.onerror = () => {
-       console.error('Error loading the remote script');
+       console.error('Error loading the Freshpaint CDN script.');
     };
     
     document.body.appendChild(script);
 
-    // return () => {
-    //   // Clean up function to remove the script
-    // //   document.body.removeChild(script);
-    // };
-  }, []); // Empty dependency array ensures this runs only once after the initial render
+  }, []);
   
 }
 
-// Initializes window.freshpaint and prepares it for hydration with content from the 
-// freshpaint-cdn.com resource fetched in the useEffect hook. 
+// Initializes Freshpaint and adds it to the browser window. 
 function freshpaintInit(_envId) {
     function p(r, e) {
         (e == null || e > r.length) && (e = r.length);
