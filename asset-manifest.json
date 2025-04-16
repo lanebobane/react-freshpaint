@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-freshpaint/static/css/main.f855e6bc.css",
+    "main.js": "/react-freshpaint/static/js/main.40cc856c.js",
+    "index.html": "/react-freshpaint/index.html",
+    "main.f855e6bc.css.map": "/react-freshpaint/static/css/main.f855e6bc.css.map",
+    "main.40cc856c.js.map": "/react-freshpaint/static/js/main.40cc856c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.40cc856c.js"
+  ]
+}
